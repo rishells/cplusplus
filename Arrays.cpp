@@ -20,5 +20,11 @@ int main()
     //     cout<<A[n]<<endl;
     // }
     
+    for (int x :A)
+    {
+        cout<<x<<endl;
+    }
+
+    cout << "Adding this print to test the remote repository changes";
     return 0;
 }
