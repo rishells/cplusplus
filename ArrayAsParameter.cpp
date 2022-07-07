@@ -1,8 +1,10 @@
+// Arrays can be only passed by address when used as parameters
+
 #include <iostream>
 
 using namespace std;
 
-void fun(int *A, int n)
+void fun(int *A, int n) // Array as a parameter with Pointer int *A
 {
     //cout<<sizeof(A)/sizeof(int)<<endl;
     A[0]=15;
@@ -19,6 +21,15 @@ int * fun2(int size){
 
     return p;
 
+}
+
+int fun3(int x, int y){
+    int *a, *b;
+    a = &x;
+    b = &y;
+
+
+    return &a + &b;
 }
 int main()
 {
@@ -47,5 +58,6 @@ int main()
     for(int i=0;i<sz;i++)
     cout<<ptr[i]<<endl;
 
+    cout<<"Sum of two numbers using pointers" << fun3(3,4) << endl;
     return 0;
 }

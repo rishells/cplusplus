@@ -2,6 +2,15 @@
 
 using namespace std;
 
+// void swap(int &x, int &y) // Call by reference
+// {
+//     int temp;
+//     temp =x;
+//     x=y;
+//     y=temp;
+
+// }
+
 void swap(int *x, int *y) // Call by address -- parameters of type pointers
 // Call by address is used to modify the actual main funcion parameters and modify them..
 {
